@@ -5,7 +5,7 @@ import HomepageShimmer from "./HomepageShimmer";
 const CountriesList = ({ query, filter }) => {
   const [CountriesData, setCountriesData] = useState([]);
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all?fields=name,flag,population,region,capital,data")
+    fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,data")
       .then((res) => res.json())
       .then((data) => setCountriesData(data));
   }, []);
